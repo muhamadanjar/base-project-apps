@@ -1,0 +1,53 @@
+# Base Project Apps
+
+## Structure
+- services/usermanagement_api : FastAPI user management (role, permission)
+- services/dashboard : Next.js dashboard (admin & user view)
+- services/etl_api : FastAPI ETL 
+
+## Setup
+
+1. Initialize submodules
+   ```bash
+   git submodule init
+   git submodule update
+   ```
+
+2. Create env files 
+   ```bash
+   cp local/usermanagement_env.local services/usermanagement_api/.env
+   cp local/dashboard_env.local services/dashboard/.env
+   cp local/etl_env.local services/etl_api/.env
+   ```
+
+3. Install dependencies
+   ```bash
+   cd services/usermanagement_api
+   pip install -r requirements.txt
+   cd ../dashboard
+   npm install
+   cd ../etl_api
+   pip install -r requirements.txt
+   ```
+
+4. Run
+   ```bash
+   cd services/usermanagement_api
+   uvicorn main:app --reload
+   cd ../dashboard
+   npm run dev
+   cd ../etl_api
+   uvicorn main:app --reload
+   ```
+
+## Database
+```sql
+-- Init usermanagement database
+CREATE DATABASE usermanagement;
+
+-- Init dashboard database
+CREATE DATABASE dashboard;
+
+-- Init etl database
+CREATE DATABASE etl;
+``` 

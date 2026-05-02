@@ -1,0 +1,9 @@
+[submodule "services/usermanagement_api"]
+	path = services/usermanagement_api
+	url = git@gitlab.com:muhamadanjar/fastapi_usermanagement.git
+[submodule "services/dashboard"]
+	path = services/dashboard
+	url = git@gitlab.com:muhamadanjar/dashboard-next.git
+[submodule "services/etl_api"]
+	path = services/etl_api
+	url = git@github.com:muhamadanjar/fastapi-etl.git
