@@ -7,3 +7,6 @@
 [submodule "services/etl_api"]
 	path = services/etl_api
 	url = git@github.com:muhamadanjar/fastapi-etl.git
+[submodule "services/payment_api"]
+	path = services/payment_api
+	url = git@github.com:muhamadanjar/fastapi-payment-service.git
