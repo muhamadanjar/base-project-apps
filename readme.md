@@ -15,9 +15,13 @@
 
 2. Create env files 
    ```bash
-   cp local/usermanagement_env.local services/usermanagement_api/.env
-   cp local/dashboard_env.local services/dashboard/.env
-   cp local/etl_env.local services/etl_api/.env
+   cp local/usermanagement_env.local local/usermanagement_env.env
+   cp local/dashboard_env.local local/dashboard_env.env
+   cp local/etl_env.local local/etl_env.env
+   
+   ln -s local/usermanagement_env.env services/usermanagement_api/.env
+   ln -s local/dashboard_env.env services/dashboard/.env
+   ln -s local/etl_env.env services/etl_api/.env
    ```
 
 3. Install dependencies

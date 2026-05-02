@@ -1,0 +1,4 @@
+SESSION_PASSWORD=password
+NEXT_BACKEND_API_URL=http://localhost:8070
+NEXT_PUBLIC_API_URL=http://localhost:3000
+DATABASE_URL=postgresql://postgres:postgres@host.docker.internal:5432/bcp

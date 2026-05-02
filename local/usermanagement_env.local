@@ -1,0 +1,75 @@
+ENVIRONTMENT=development
+DEBUG=true
+DATABASE_URL="postgresql://postgres:xcWI3128@localhost:5432/fastapi_usermanagement"
+DATABASE_TYPE="postgresql"
+DB_NAME=fastapi_usermanagement
+DB_USER=postgres
+DB_PORT=5432
+DB_HOST=localhost
+DB_PASSWORD=xcWI3128
+BROKER_URL=amqp://guest:guest@localhost:5672/
+SECRET_KEY=
+ACCESS_TOKEN_EXPIRES=30
+CORS_ALLOW_ORIGINS=http://localhost,http://example.com
+CORS_ALLOW_CREDENTIALS=True
+CORS_ALLOW_METHODS=GET,POST,PUT,DELETE
+CORS_ALLOW_HEADERS=Content-Type,Authorization
+EMAIL_SMTP_HOST=smtp.ethereal.email
+EMAIL_SMTP_USERNAME=jazlyn.orn@ethereal.email
+EMAIL_SMTP_PASSWORD=WmrB5zmhTyWYqhZY1T
+EMAIL_FROM_EMAIL=noreply@mail.com
+EMAIL_USE_TLS=True
+EMAIL_USE_SSL=false
+
+# Password Security
+PASSWORD_MIN_LENGTH=6
+PASSWORD_REQUIRE_UPPERCASE=false
+PASSWORD_REQUIRE_LOWERCASE=false
+PASSWORD_REQUIRE_NUMBERS=false
+PASSWORD_REQUIRE_SPECIAL=true
+
+# ─── Storage (choose one backend) ────────────────────────────────────────────
+# Backend: local | s3 | gcs | ftp | sftp
+STORAGE_BACKEND=local
+
+# ── Local filesystem ──────────────────────────────────────────────────────────
+STORAGE_LOCAL_BASE_DIR=media
+STORAGE_LOCAL_BASE_URL=/media
+
+# ── S3-compatible (AWS S3, MinIO, Wasabi, Backblaze B2, DigitalOcean Spaces) ─
+# Leave STORAGE_S3_ENDPOINT_URL empty for AWS S3.
+# For MinIO set: STORAGE_S3_ENDPOINT_URL=http://localhost:9000 and STORAGE_S3_PATH_STYLE=true
+STORAGE_S3_BUCKET=my-bucket
+STORAGE_S3_REGION=us-east-1
+STORAGE_S3_ACCESS_KEY_ID=
+STORAGE_S3_SECRET_ACCESS_KEY=
+STORAGE_S3_ENDPOINT_URL=
+STORAGE_S3_PRESIGNED_EXPIRY=3600
+STORAGE_S3_PUBLIC=false
+STORAGE_S3_PATH_STYLE=false
+
+# ── Google Cloud Storage ───────────────────────────────────────────────────────
+STORAGE_GCS_BUCKET=my-gcs-bucket
+STORAGE_GCS_PROJECT=my-gcp-project
+STORAGE_GCS_CREDENTIALS_FILE=/path/to/service-account.json
+STORAGE_GCS_PRESIGNED_EXPIRY=3600
+STORAGE_GCS_PUBLIC=false
+
+# ── FTP ───────────────────────────────────────────────────────────────────────
+STORAGE_FTP_HOST=ftp.example.com
+STORAGE_FTP_PORT=21
+STORAGE_FTP_USER=ftpuser
+STORAGE_FTP_PASSWORD=secret
+STORAGE_FTP_BASE_DIR=/uploads
+STORAGE_FTP_BASE_URL=https://static.example.com
+STORAGE_FTP_PASSIVE=true
+STORAGE_FTP_TLS=false
+
+# ── SFTP ──────────────────────────────────────────────────────────────────────
+STORAGE_SFTP_HOST=sftp.example.com
+STORAGE_SFTP_PORT=22
+STORAGE_SFTP_USER=sftpuser
+STORAGE_SFTP_PASSWORD=
+STORAGE_SFTP_PRIVATE_KEY_PATH=/home/user/.ssh/id_rsa
+STORAGE_SFTP_BASE_DIR=/uploads
+STORAGE_SFTP_BASE_URL=https://static.example.com
