@@ -10,3 +10,9 @@
 [submodule "services/payment_api"]
 	path = services/payment_api
 	url = git@github.com:muhamadanjar/fastapi-payment-service.git
+[submodule "services/tileserver_api"]
+	path = services/tileserver_api
+	url = git@github.com:muhamadanjar/fastapi-tileserver.git
+[submodule "services/geoportal"]
+	path = services/geoportal
+	url = git@github.com:muhamadanjar/geoportal-app.git
