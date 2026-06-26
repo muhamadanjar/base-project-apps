@@ -16,3 +16,6 @@
 [submodule "services/geoportal"]
 	path = services/geoportal
 	url = git@github.com:muhamadanjar/geoportal-app.git
+[submodule "services/pos-web"]
+	path = services/pos-web
+	url = git@github.com:muhamadanjar/pos.git
