@@ -16,6 +16,10 @@ export type LayerType =
 
 export type FileType = 'vector' | 'raster' | 'external';
 
+export type StrokePattern = 'solid' | 'dashed' | 'dotted' | 'dash-dot';
+
+export type FillPattern = 'solid' | 'hatched' | 'cross-hatched' | 'dotted';
+
 export interface LayerConfig {
   layer_id: string;
   layer_type: LayerType;
