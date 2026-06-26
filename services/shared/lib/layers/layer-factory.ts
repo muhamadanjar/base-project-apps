@@ -1,5 +1,6 @@
 import type { LayerType, LayerConfig } from './types';
 import type { LayerAdapter } from './adapters/types';
+import { TileAdapter } from './adapters/tile-adapter';
 
 export class LayerFactory {
   private adapters = new Map<LayerType, LayerAdapter>();
@@ -9,8 +10,9 @@ export class LayerFactory {
   }
 
   private registerDefaultAdapters(): void {
-    // Placeholder — will be populated as adapters are created
-    // For now, no adapters registered (tests expect getAdapter to return undefined for unknown)
+    this.register('tile', new TileAdapter());
+    this.register('vector', new TileAdapter());
+    this.register('mbtiles', new TileAdapter());
   }
 
   register(type: LayerType, adapter: LayerAdapter): void {
