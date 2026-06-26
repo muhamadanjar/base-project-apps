@@ -1,6 +1,7 @@
 import type { LayerType, LayerConfig } from './types';
 import type { LayerAdapter } from './adapters/types';
 import { TileAdapter } from './adapters/tile-adapter';
+import { MVTAdapter } from './adapters/mvt-adapter';
 
 export class LayerFactory {
   private adapters = new Map<LayerType, LayerAdapter>();
@@ -13,6 +14,7 @@ export class LayerFactory {
     this.register('tile', new TileAdapter());
     this.register('vector', new TileAdapter());
     this.register('mbtiles', new TileAdapter());
+    this.register('mvt', new MVTAdapter());
   }
 
   register(type: LayerType, adapter: LayerAdapter): void {
