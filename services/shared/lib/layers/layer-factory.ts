@@ -6,6 +6,7 @@ import { EsriAdapter } from './adapters/esri-adapter';
 import { WMSAdapter } from './adapters/wms-adapter';
 import { WMTSAdapter } from './adapters/wmts-adapter';
 import { WFSAdapter } from './adapters/wfs-adapter';
+import { GeoJsonAdapter } from './adapters/geojson-adapter';
 
 export class LayerFactory {
   private adapters = new Map<LayerType, LayerAdapter>();
@@ -28,6 +29,9 @@ export class LayerFactory {
     this.register('wms', new WMSAdapter());
     this.register('wmts', new WMTSAdapter());
     this.register('wfs', new WFSAdapter());
+    const geoJsonAdapter = new GeoJsonAdapter();
+    this.register('geojson', geoJsonAdapter);
+    this.register('kml', geoJsonAdapter);
   }
 
   register(type: LayerType, adapter: LayerAdapter): void {
