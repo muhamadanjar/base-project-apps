@@ -1,0 +1,21 @@
+{
+  "name": "base-project-apps",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Geospatial services monorepo (dashboard, geoportal, shared)",
+  "workspaces": [
+    "services/shared",
+    "services/dashboard",
+    "services/geoportal",
+    "services/tileserver_api",
+    "services/etl_api",
+    "services/payment_api",
+    "services/usermanagement_api",
+    "services/pos-web"
+  ],
+  "scripts": {
+    "install:all": "npm install",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces"
+  }
+}
