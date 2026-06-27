@@ -1,0 +1,9 @@
+packages:
+  - 'services/shared'
+  - 'services/dashboard'
+  - 'services/geoportal'
+  - 'services/tileserver_api'
+  - 'services/etl_api'
+  - 'services/payment_api'
+  - 'services/usermanagement_api'
+  - 'services/pos-web'
