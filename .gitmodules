@@ -19,6 +19,3 @@
 [submodule "services/pos-web"]
 	path = services/pos-web
 	url = git@github.com:muhamadanjar/pos.git
-[submodule "services/shared"]
-	path = services/shared
-	url = git@github.com:muhamadanjar/share-layers.git

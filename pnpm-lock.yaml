@@ -8,6 +8,25 @@ importers:
 
   .: {}
 
+  libs/layers:
+    dependencies:
+      '@deck.gl/extensions':
+        specifier: ^9.3.4
+        version: 9.3.5(@deck.gl/core@9.3.5)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))
+      '@deck.gl/geo-layers':
+        specifier: ^9.3.5
+        version: 9.3.5(@deck.gl/core@9.3.5)(@deck.gl/extensions@9.3.5(@deck.gl/core@9.3.5)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5))))(@deck.gl/layers@9.3.5(@deck.gl/core@9.3.5)(@loaders.gl/core@4.4.3)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5))))(@deck.gl/mesh-layers@9.3.5(@deck.gl/core@9.3.5)(@loaders.gl/core@4.4.3)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))(@luma.gl/gltf@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))(@loaders.gl/core@4.4.3)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))
+      '@deck.gl/layers':
+        specifier: ^9.3.5
+        version: 9.3.5(@deck.gl/core@9.3.5)(@loaders.gl/core@4.4.3)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))
+    devDependencies:
+      typescript:
+        specifier: ^5.3.0
+        version: 5.9.3
+      vitest:
+        specifier: ^4.1.9
+        version: 4.1.9(@types/node@25.9.4)(vite@8.1.0(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4))
+
   services/dashboard:
     dependencies:
       '@aws-sdk/client-s3':
@@ -16,9 +35,6 @@ importers:
       '@aws-sdk/s3-request-presigner':
         specifier: ^3.1048.0
         version: 3.1075.0
-      '@base-project/shared':
-        specifier: workspace:*
-        version: link:../shared
       '@base-ui-components/react':
         specifier: 1.0.0-alpha.6
         version: 1.0.0-alpha.6(@types/react@18.3.31)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -67,6 +83,9 @@ importers:
       '@hookform/resolvers':
         specifier: ^3.10.0
         version: 3.10.0(react-hook-form@7.80.0(react@19.2.7))
+      '@muhamadanjar/layers':
+        specifier: workspace:*
+        version: link:../../libs/layers
       '@mui/material':
         specifier: ^6.3.1
         version: 6.5.0(@emotion/react@11.14.0(@types/react@18.3.31)(react@19.2.7))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.3.31)(react@19.2.7))(@types/react@18.3.31)(react@19.2.7))(@types/react@18.3.31)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -374,9 +393,6 @@ importers:
 
   services/geoportal:
     dependencies:
-      '@base-project/shared':
-        specifier: workspace:*
-        version: link:../shared
       '@deck.gl/aggregation-layers':
         specifier: ^9.2.2
         version: 9.3.5(@deck.gl/core@9.3.5)(@deck.gl/layers@9.3.5(@deck.gl/core@9.3.5)(@loaders.gl/core@4.4.3)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5))))(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))
@@ -628,25 +644,6 @@ importers:
       vite:
         specifier: ^8.0.12
         version: 8.1.0(@types/node@24.13.2)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)
-
-  services/shared:
-    dependencies:
-      '@deck.gl/extensions':
-        specifier: ^9.3.4
-        version: 9.3.5(@deck.gl/core@9.3.5)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))
-      '@deck.gl/geo-layers':
-        specifier: ^9.3.5
-        version: 9.3.5(@deck.gl/core@9.3.5)(@deck.gl/extensions@9.3.5(@deck.gl/core@9.3.5)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5))))(@deck.gl/layers@9.3.5(@deck.gl/core@9.3.5)(@loaders.gl/core@4.4.3)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5))))(@deck.gl/mesh-layers@9.3.5(@deck.gl/core@9.3.5)(@loaders.gl/core@4.4.3)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))(@luma.gl/gltf@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))(@loaders.gl/core@4.4.3)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))
-      '@deck.gl/layers':
-        specifier: ^9.3.5
-        version: 9.3.5(@deck.gl/core@9.3.5)(@loaders.gl/core@4.4.3)(@luma.gl/core@9.3.5)(@luma.gl/engine@9.3.5(@luma.gl/core@9.3.5)(@luma.gl/shadertools@9.3.5(@luma.gl/core@9.3.5)))
-    devDependencies:
-      typescript:
-        specifier: ^5.3.0
-        version: 5.9.3
-      vitest:
-        specifier: ^4.1.9
-        version: 4.1.9(@types/node@25.9.4)(vite@8.1.0(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4))
 
 packages:
 

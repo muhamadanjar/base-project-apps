@@ -1,5 +1,5 @@
 packages:
-  - 'services/shared'
+  - 'libs/layers'
   - 'services/dashboard'
   - 'services/geoportal'
   - 'services/tileserver_api'
