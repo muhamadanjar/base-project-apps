@@ -34,3 +34,17 @@
 - Treat each service as scoped unit (changes to one service unless cross-service required)
 - Use SSH URLs consistently (avoid mixing SSH + HTTP)
 - Submodule management (move, add, remove) requires manual git ops by user
+
+#### Service Entry Points & Documentation
+
+Each service in this monorepo is autonomous:
+
+**Entry Points:**
+- Each service has its own `AGENTS.md` or `CLAUDE.md` file as its project entry point
+- Service-level instructions override root instructions
+- Locate service-specific rules in `services/{service_name}/` or `libs/{package_name}/`
+
+**Documentation:**
+- Each service MUST have a `doc/` or `docs/` folder for project documentation
+- Document service-specific setup, APIs, workflows, and troubleshooting
+- README or index in doc folder links to all service docs
