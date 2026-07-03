@@ -22,3 +22,6 @@
 [submodule "libs/layers"]
 	path = libs/layers
 	url = git@github.com:muhamadanjar/share-layers.git
+[submodule "services/backoffice"]
+	path = services/backoffice
+	url = git@github.com:muhamadanjar/backoffice.git
