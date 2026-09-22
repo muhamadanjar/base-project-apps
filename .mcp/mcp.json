@@ -1,0 +1,78 @@
+{
+  "mcpServers": {
+    "usermanagement-services": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mcp-bridge/openapi",
+        "--schema", "http://localhost:8070/openapi.json"
+      ]
+    },
+    "tileserver-services": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mcp-bridge/openapi",
+        "--schema", "http://localhost:8050/openapi.json"
+      ]
+    },
+    "upload-services": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mcp-bridge/openapi",
+        "--schema", "http://localhost:8010/openapi.json"
+      ]
+    },
+    "lahat-services": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mcp-bridge/openapi",
+        "--schema", "http://localhost:8090/openapi.json"
+      ]
+    },
+    "usermanagement-db": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-postgres",
+        "postgresql://postgres:xcWI3128@localhost:5432/fastapi_usermanagement"
+      ]
+    },
+    "redis-cache": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mcp-get/redis",
+        "--url", "redis://localhost:63791"
+      ]
+    },
+    "rabbitmq-broker": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-rabbitmq",
+        "--amqp-url", "amqp://guest:guest@localhost:56721/"
+      ]
+    },
+    "codebase-memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "codebase-memory-mcp"
+      ],
+      "env": {
+        "MEMORY_STORAGE_PATH": "/home/anjar/Documents/AIBrain/10-Codebase"
+      }
+    },
+    "graphify": {
+      "command": "python",
+      "args": [
+        "-m",
+        "graphify",
+        "--vault-path",
+        "/home/anjar/Documents/AIBrain/20-Concepts"
+      ]
+    }
+  }
+}

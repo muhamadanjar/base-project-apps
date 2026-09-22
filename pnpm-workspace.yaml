@@ -7,3 +7,9 @@ packages:
   - 'services/payment_api'
   - 'services/usermanagement_api'
   - 'services/pos-web'
+allowBuilds:
+  '@vaadin/vaadin-usage-statistics': false
+  core-js: false
+  esbuild: false
+  sharp: false
+  unrs-resolver: false

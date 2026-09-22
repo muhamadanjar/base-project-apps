@@ -28,3 +28,11 @@
 [submodule "services/upload_api"]
 	path = services/upload_api
 	url = git@github.com:muhamadanjar/fastapi_upload.git
+
+[submodule "libs/service_auth"]
+	path = libs/service_auth
+	url = git@github.com:muhamadanjar/service_auth.git
+
+[submodule "services/lms-system"]
+	path = services/lms-system
+	url = git@github.com:muhamadanjar/lms-system.git
